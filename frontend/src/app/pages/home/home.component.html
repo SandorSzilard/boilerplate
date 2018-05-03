@@ -33,7 +33,7 @@
       <tr *ngFor ="let data of gradingDataTeachers">
         <td>{{data.studentName}}</td>
         <td>{{data.note}}</td>
-        
+
       </tr>
 
 
@@ -74,7 +74,7 @@
       </div>
     </fieldset>
 
-    <fieldset > 
+    <fieldset >
       <legend *ngIf="getIsTeaching()">New note</legend>
       <input type="number" class="form-control" placeholder="Enter note" [(ngModel)]="newGrade" *ngIf="getIsTeaching()">
       <button type="button" class="btn btn-primary" *ngIf="getIsTeaching()" (click)="updateGrade()">Set note</button>
