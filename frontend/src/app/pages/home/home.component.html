@@ -1,3 +1,83 @@
-<p>
-  home works!
-</p>
+<div class=table >
+  <table class="table table-hover" *ngIf="!loggedUser.verifyIfTeacher">
+    <thead>
+      <tr class="table-active">
+        <th scope="col">Subject Name</th>
+        <th scope="col">Teacher Name</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor ="let data of dataDetalis">
+        <td>{{data.subjectName}}</td>
+        <td>{{data.teacherName}}</td>
+        <td>{{data.note}}</td>
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<div class=table >
+  <table class="table table-hover" *ngIf="loggedUser.verifyIfTeacher">
+    <thead>
+      <tr class="table-active">
+        <th scope="col">Student Name</th>
+        <th scope="col">Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor ="let data of gradingDataTeachers">
+        <td>{{data.studentName}}</td>
+        <td>{{data.note}}</td>
+        
+      </tr>
+
+
+    </tbody>
+  </table>
+</div>
+
+<div class="subjects">
+  <div *ngIf="!loggedUser.verifyIfTeacher">
+    <fieldset>
+      <legend>Choose subject</legend>
+      <div class="form-group" >
+        <select class="custom-select"  [(ngModel)] = "selectedSubject">
+          <option *ngFor= " let subject of unatendedSubjects" [ngValue]= "subject">{{subject.name}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="onSelectSubjectClick()">Select</button>
+    </fieldset>
+  </div>
+
+  <div   *ngIf="loggedUser.verifyIfTeacher">
+    <fieldset>
+      <legend *ngIf="!getIsTeaching()">Choose subject you are teaching </legend>
+      <div class="form-group" *ngIf="!getIsTeaching()">
+        <select class="custom-select" [(ngModel)] = "selectedTeacherSubject" >
+          <option *ngFor= " let subject of freeSubjects" [ngValue]= "subject">{{subject.name}}</option>
+        </select>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="onSelectSubjectClick()" *ngIf="!getIsTeaching()">Select</button>
+    </fieldset>
+
+    <fieldset>
+      <legend *ngIf="getIsTeaching()">Choose student</legend>
+      <div class="form-group">
+        <select class="custom-select" [(ngModel)]="teachersSelectedStudent" *ngIf="getIsTeaching()">
+          <option *ngFor ="let student of teachersStudents" [ngValue]="student">{{student.name}}</option>
+        </select>
+      </div>
+    </fieldset>
+
+    <fieldset > 
+      <legend *ngIf="getIsTeaching()">New note</legend>
+      <input type="number" class="form-control" placeholder="Enter note" [(ngModel)]="newGrade" *ngIf="getIsTeaching()">
+      <button type="button" class="btn btn-primary" *ngIf="getIsTeaching()" (click)="updateGrade()">Set note</button>
+    </fieldset>
+  </div>
+</div>

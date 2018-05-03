@@ -1,0 +1,134 @@
+{
+  "logindata": [
+    {
+      "id": 1,
+      "name": "stud01",
+      "contact": "stud01",
+      "verifyIfTeacher": false,
+      "UN": "stud01",
+      "PW": "stud01"
+    },
+    {
+      "name": "prfInfo",
+      "UN": "profInfo",
+      "PW": "profInfo",
+      "contact": "profInfo",
+      "verifyIfTeacher": true,
+      "id": 2
+    },
+    {
+      "name": "stud02",
+      "UN": "stud02",
+      "PW": "stud02",
+      "contact": "stud02",
+      "verifyIfTeacher": false,
+      "id": 3
+    },
+    {
+      "name": "prfIngSoft",
+      "UN": "prfIngSoft",
+      "PW": "prfIngSoft",
+      "contact": "prfIngSoft",
+      "verifyIfTeacher": true,
+      "id": 4
+    },
+    {
+      "name": "prfPD",
+      "UN": "prfPD",
+      "PW": "prfPD",
+      "contact": "prfPD",
+      "verifyIfTeacher": true,
+      "id": 5
+    },
+    {
+      "name": "prfBDD",
+      "UN": "prfBDD",
+      "PW": "prfBDD",
+      "contact": "prfBDD",
+      "verifyIfTeacher": true,
+      "id": 6
+    },
+    {
+      "name": "stud03",
+      "UN": "stud03",
+      "PW": "stud03",
+      "contact": "stud03",
+      "verifyIfTeacher": false,
+      "id": 7
+    },
+    {
+      "name": "stud04",
+      "UN": "stud04",
+      "PW": "stud04",
+      "contact": "stud04",
+      "verifyIfTeacher": false,
+      "id": 8
+    },
+    {
+      "name": "stud05",
+      "UN": "stud05",
+      "PW": "stud05",
+      "contact": "stud05",
+      "verifyIfTeacher": false,
+      "id": 9
+    },
+    {
+      "name": "prfWeb",
+      "UN": "prfWeb",
+      "PW": "prfWeb",
+      "contact": "prfWeb",
+      "verifyIfTeacher": true,
+      "id": 10
+    },
+    {
+      "name": "studentt",
+      "UN": "studentt",
+      "PW": "studentt",
+      "contact": "studentt",
+      "verifyIfTeacher": false,
+      "id": 11
+    }
+  ],
+  "subjects": [
+    {
+      "id": 1,
+      "id_prof": 2,
+      "name": "Informatica"
+    },
+    {
+      "id": 2,
+      "id_prof": 4,
+      "name": "InginerieSoft"
+    },
+    {
+      "id_prof": 5,
+      "name": "Programare Distribuita",
+      "id": 3
+    },
+    {
+      "id_prof": 6,
+      "name": "BDD",
+      "id": 4
+    },
+    {
+      "id_prof": 10,
+      "name": "WEB",
+      "id": 4
+    }
+  ],
+  "gradingData": [
+    {
+      "id_subject": 2,
+      "id_stud": 1,
+      "grade": 0,
+      "id": 1,
+      "note": 3
+    },
+    {
+      "id_subject": 1,
+      "id_stud": "1",
+      "note": 0,
+      "id": 2
+    }
+  ]
+}

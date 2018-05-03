@@ -1,3 +1,46 @@
-<p>
-  register works!
-</p>
+<body>
+  <div class=register>
+    <form>
+      <fieldset>
+        <h2>Register</h2>
+        
+        <div class="form-group">
+          <label for="idLastName">Name</label>
+          <input type="lastname" class="form-control" id="idLastName" name="lastname" [(ngModel)]="name" placeholder="Enter last name">
+        </div>
+        <div class="form-group">
+          <label for="idEmail">E-mail</label>
+          <input type="contact" class="form-control" id="idEmail" name="contact" [(ngModel)]="contact" placeholder="Enter e-mail address">
+        </div>
+        <div class="form-group">
+          <label for="idUsername">Username</label>
+          <input type="username" class="form-control" id="idUsername" name="username" [(ngModel)]="UN" placeholder="Enter username">
+        </div>
+        <div class="form-group">
+          <label for="idPassword">Password</label>
+          <input type="password" class="form-control" id="idPassword" name="password" [(ngModel)]="PW" placeholder="Enter password">
+        </div>
+
+        <button type="button" class="btn btn-primary" (click)="onRegisterClick()">Sign Up</button>
+        <a href="http://localhost:4200/#/auth/login">
+          <button type="button" class="btn btn-primary">Back</button>
+        </a>
+        <form>
+          <fieldset>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" [value]=false checked="" [(ngModel)]="verifyIfTeacher"> For Students
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" [value]=true checked="" [(ngModel)]="verifyIfTeacher" > Teachers ONLY
+              </label>
+            </div>
+          </fieldset>
+        </form>
+
+      </fieldset>
+    </form>
+  </div>
+</body>
