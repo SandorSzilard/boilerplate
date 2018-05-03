@@ -1,3 +1,0 @@
-https://stackoverflow.com/questions/33181936/how-to-use-select-option-ngfor-on-an-array-of-objects-in-angular2
-
-https://stackoverflow.com/questions/1085801/get-selected-value-in-dropdown-list-using-javascript
